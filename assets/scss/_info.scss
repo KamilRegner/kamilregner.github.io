@@ -1,0 +1,77 @@
+.info {
+  width: 100%;
+  min-height: 50vh;
+  background: $black;
+  color: $white;
+  @include for-size("tablet") {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @include flexbox {
+    flex-direction: row;
+    @include for-size("tablet") {
+      flex-direction: column;
+    }
+  }
+  .mess,
+  .jidlo {
+    width: 40vw;
+    font-size: 1.2rem;
+    @include for-size("tablet") {
+      width: 90vw;
+    }
+    @include flexbox {
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      @include for-size("tablet") {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &:hover {
+      h2 {
+        color: $gold;
+      }
+      svg {
+        fill: $gold;
+        transform: scale(1.1);
+      }
+    }
+
+    .container {
+      width: 23vw;
+      @include for-size("tablet") {
+        width: 90vw;
+        text-align: center;
+      }
+      @include flexbox {
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: flex-start;
+        @include for-size("tablet") {
+          align-items: center;
+        }
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        transition: 0.5s;
+        @include for-size("tablet") {
+          margin-top: 0;
+        }
+      }
+    }
+    svg {
+      height: 5rem;
+      fill: $white;
+      transition: 0.5s;
+      @include for-size("tablet") {
+        height: 4rem;
+        margin-top: 3rem;
+      }
+    }
+  }
+}

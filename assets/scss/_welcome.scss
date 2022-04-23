@@ -1,0 +1,83 @@
+.welcome {
+  width: 100%;
+  min-height: 95vh;
+
+  background: $white;
+  z-index: -1;
+
+  @include flexbox {
+    flex-direction: column;
+  }
+
+  .welcome-blacker {
+    display: none;
+
+    @include for-size("tablet") {
+      display: block;
+      width: 100%;
+      background-color: $darker;
+      position: absolute;
+      top: 0;
+      height: 95vh;
+    }
+  }
+
+  .welcome-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+    margin: 0;
+    transition: .5s;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }    
+    img {
+      width: 100%;
+      margin: 0;
+      height: 95vh;
+      object-fit: cover;
+      @include for-size("tablet"){
+        object-position: right;
+      }
+    }      
+  }
+
+  .text {
+    max-width: 1200px;
+    width: 90vw;
+    z-index: 5;
+    @include for-size("tablet") {
+      margin-top: 35vh;
+    }
+
+    @include flexbox {
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+      align-items: flex-start;
+    }
+
+    h1 {
+      color: black;
+      font-size: 3.5rem;
+      margin: 0;
+      padding: 0;
+
+      @include for-size("tablet") {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      color: black;
+      font-size: 1.5rem;
+      margin: 0;
+      margin-top: 3.9rem;
+      padding: 0;
+      line-height: 1.6rem;
+    }
+  }
+}

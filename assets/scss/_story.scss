@@ -1,0 +1,39 @@
+.story {
+    min-height: 95vh;
+    @include flexbox {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    .container {
+        img {
+            height: 60vh;
+            width: 30vw;
+            object-fit: cover;
+            transition: .5s;
+            margin: 1rem;
+            @include for-size("tablet") {
+                width: 90vw;
+                margin: 0;
+                margin-bottom: 2rem;
+            }
+        }
+        p {
+            width: 30vw;
+            line-height: 1.7rem;
+            margin: 1rem;
+            @include for-size("tablet") {
+                width: 90vw;
+                margin: 0;
+            }
+        }
+        @include flexbox {
+            flex-direction: row;
+            justify-content: space-between;
+            @include for-size("tablet") {
+                flex-direction: column;
+            }
+        }
+    }
+}

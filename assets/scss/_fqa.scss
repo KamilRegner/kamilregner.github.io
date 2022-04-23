@@ -1,0 +1,37 @@
+.fqa {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    min-height: 60vh;
+    background: black;
+    color: $white;
+    @include flexbox {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 3rem;
+        color: $gold;
+        @include for-size("tablet") {
+            text-align: center;
+        }
+    }
+    .box {
+        width: 100%;
+        margin-bottom: 2rem;
+        font-size: 1.15rem;
+
+        @include flexbox {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        p {
+            width: 90vw;
+            max-width: 1100px;
+            margin: 0;
+            margin-bottom: 0.3rem;
+        }
+        .question {
+            font-weight: 600;
+        }
+    }
+}
